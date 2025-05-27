@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  ddns-api-server:
+    build: . # Construye la imagen desde el Dockerfile en este directorio
+    container_name: ddns-api-server
+    restart: unless-stopped
+    ports:
+      - "5000:5000" # Mapea el puerto del contenedor al host. Cloudflare Tunnel usará este puerto.
+    environment:
+      # --- CLAVES SECRETAS Y CREDENCIALES (¡MODIFICA ESTOS VALORES!) ---
+      - DDNS_SECRET_KEY=your_super_secret_key_for_custom_clients
+      - ROUTER_DDNS_USERNAME=router_user_for_tplink
+      - ROUTER_DDNS_PASSWORD=router_pass_for_tplink
+      # --- RUTA DEL ARCHIVO DE IP PERSISTENTE ---
+      - IP_FILE=/data/ips.json
+    volumes:
+      # Monta un volumen para persistir los datos de IPs y logs del script
+      - ./ddns_data:/data
+      # Asegúrate de que update_script.sh sea ejecutable en el contenedor (ya se hace en Dockerfile)
