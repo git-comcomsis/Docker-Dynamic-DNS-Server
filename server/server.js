@@ -160,7 +160,7 @@ async function processUpdate(locationName, newIp, reporterIp, sourceType, res, r
             return res.status(500).json({ status: "error", message: "Internal Server Error", details: error.message });
         }
     } finally {
-        if (client) client.release(); // Liberar el cliente de vuelta al pool
+        //if (client) client.release(); // Liberar el cliente de vuelta al pool
     }
 }
 
@@ -215,7 +215,7 @@ app.get('/status', async(req, res) => {
         console.error(`[${new Date().toISOString()}] Error fetching status from DB:`, error);
         res.status(500).json({ status: "error", message: "Error fetching status", details: error.message });
     } finally {
-        if (client) client.release();
+        //if (client) client.release();
     }
 });
 
