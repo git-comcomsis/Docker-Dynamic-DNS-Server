@@ -6,11 +6,9 @@ WORKDIR /app
 
 # Copia los archivos de package.json y package-lock.json (si existe)
 COPY package*.json ./
-
-
 # Copia el resto de tu aplicación
-COPY server.js .
-COPY update_script.sh .
+COPY server.js ./
+COPY update_script.sh ./
 
 # Asegura que el script de actualización sea ejecutable
 RUN chmod +x update_script.sh
