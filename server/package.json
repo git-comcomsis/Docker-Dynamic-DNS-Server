@@ -3,16 +3,16 @@
     "version": "1.0.0",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "db:migrate": "node server.js migrate",
+        "db:init": "node server.js initdb"
     },
     "keywords": [],
     "author": "Boscotron - CONCOMSIS S.A. de C.V.",
-    "contributors": [
-        {
-            "name": "Boscotron",
-            "email": "juan.m.comsis@gmail.com"
-        }
-    ],
+    "contributors": [{
+        "name": "Boscotron",
+        "email": "juan.m.comsis@gmail.com"
+    }],
     "repository": {
         "type": "git",
         "url": "https://github.com/git-comcomsis/Docker-Dynamic-DNS-Server.git"
@@ -21,6 +21,7 @@
     "description": "Servidor Dynamic DNS: Un servicio web simple que exponga un endpoint HTTP. Mecanismo de Registro: El servidor DDNS guardará la IP recibida. Ejecución de Script: El servidor API, al recibir una actualización, puede ejecutar un script adicional.",
     "dependencies": {
         "body-parser": "^2.2.0",
-        "express": "^5.1.0"
+        "express": "^5.1.0",
+        "pg": "^8.12.0"
     }
 }
