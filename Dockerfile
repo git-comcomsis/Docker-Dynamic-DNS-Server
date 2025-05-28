@@ -5,10 +5,10 @@ FROM node:18-alpine
 WORKDIR /server
 
 # Copia los archivos de package.json y package-lock.json (si existe)
-COPY package*.json ./
+COPY server/package*.json ./
 # Copia el resto de tu aplicación
-COPY server.js ./
-COPY update_script.sh ./
+COPY server/server.js ./
+COPY server/update_script.sh ./
 
 # Asegura que el script de actualización sea ejecutable
 RUN chmod +x update_script.sh
