@@ -13,6 +13,6 @@ docker run -d \
   -e DDNS_SECRET_KEY="your_super_secret_key" \
   -e ROUTER_DDNS_USERNAME="router_user" \
   -e ROUTER_DDNS_PASSWORD="router_pass" \
-  -e IP_FILE="/server/ips.json" \
+  -e IP_FILE="/data/ips.json" \
   -v $HOME/ddns_data:/data \
   dcss-ddns-server
