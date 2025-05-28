@@ -12,7 +12,7 @@ services:
       - ROUTER_DDNS_USERNAME=router_user_for_tplink
       - ROUTER_DDNS_PASSWORD=router_pass_for_tplink
       # --- RUTA DEL ARCHIVO DE IP PERSISTENTE ---
-      - IP_FILE=/data/ips.json
+      - IP_FILE=/server/ips.json
     volumes:
       # Monta un volumen para persistir los datos de IPs y logs del script
       - ./ddns_data:/data
