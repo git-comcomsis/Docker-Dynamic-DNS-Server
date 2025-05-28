@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // Para manejar query parame
 // Archivo donde se guardarán las IPs
 const IP_FILE = process.env.IP_FILE || '/data/ips.json';
 // Ruta al script a ejecutar (dentro del contenedor)
-const UPDATE_SCRIPT_PATH = "/app/update_script.sh";
+const UPDATE_SCRIPT_PATH = "/server/update_script.sh";
 
 // Claves secretas de entorno
 const DDNS_SECRET_KEY = process.env.DDNS_SECRET_KEY || 'your_super_secret_key'; // Para clientes personalizados (POST)
