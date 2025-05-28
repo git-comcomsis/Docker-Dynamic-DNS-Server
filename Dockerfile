@@ -9,11 +9,9 @@ COPY server/package*.json ./
 # Copia el resto de tu aplicación
 COPY server/server.js ./
 COPY server/update_script.sh ./
-COPY server/ips.json ./
 
 # Asegura que el script de actualización sea ejecutable
 RUN chmod +x update_script.sh
-RUN chmod 755 ips.json
 
 # Instala las dependencias
 RUN npm install 
@@ -21,6 +19,8 @@ RUN npm install
 # Crea un directorio para los datos y asegúrate de que el usuario 'node' pueda escribir en él
 # La imagen 'alpine' usa un usuario 'node' por defecto, lo cual es más seguro que 'root'
 RUN mkdir -p /data && chown node:node /data
+COPY server/ips.json ./data/ 
+#RUN chmod 755 ips.json
 
 # Cambia al usuario 'node'
 USER node
