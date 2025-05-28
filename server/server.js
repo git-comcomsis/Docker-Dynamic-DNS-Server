@@ -101,7 +101,7 @@ async function executeUpdateScript(locationName, newIp, oldIp) {
         if (stderr) console.error(`Script error for ${locationName}:\n${stderr}`);
         return { success: true, output: stdout, error: stderr };
     } catch (error) {
-        console.error(`Error executing script for ${locationName}:`, error);
+        console.error(`Error executing script for ${locationName}:`, error, command);
         return { success: false, error: error.message };
     }
 }
