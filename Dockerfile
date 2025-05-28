@@ -7,8 +7,6 @@ WORKDIR /app
 # Copia los archivos de package.json y package-lock.json (si existe)
 COPY package*.json ./
 
-# Instala las dependencias
-RUN npm install 
 
 # Copia el resto de tu aplicación
 COPY server.js .
@@ -16,6 +14,10 @@ COPY update_script.sh .
 
 # Asegura que el script de actualización sea ejecutable
 RUN chmod +x update_script.sh
+
+
+# Instala las dependencias
+RUN npm install 
 
 # Crea un directorio para los datos y asegúrate de que el usuario 'node' pueda escribir en él
 # La imagen 'alpine' usa un usuario 'node' por defecto, lo cual es más seguro que 'root'
