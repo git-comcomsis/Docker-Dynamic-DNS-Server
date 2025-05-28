@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instala las dependencias
-RUN npm install --production
+RUN npm install 
 
 # Copia el resto de tu aplicación
 COPY server.js .

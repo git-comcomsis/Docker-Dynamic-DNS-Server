@@ -52,7 +52,7 @@ Además, aprovecha **Cloudflare Tunnels** para exponer de forma segura el servid
 Clona este repositorio o crea los archivos manualmente:
 
 ```bash
-git clone [https://github.com/git-comcomsis/Docker-Dynamic-DNS-Server.git](https://github.com/git-comcomsis/Docker-Dynamic-DNS-Server.git) 
+git clone https://github.com/git-comcomsis/Docker-Dynamic-DNS-Server.git
 
 cd Docker-Dynamic-DNS-Server
 ```
