@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # Establece el directorio de trabajo dentro del contenedor
-WORKDIR /app
+WORKDIR /server
 
 # Copia los archivos de package.json y package-lock.json (si existe)
 COPY package*.json ./
@@ -12,7 +12,6 @@ COPY update_script.sh ./
 
 # Asegura que el script de actualización sea ejecutable
 RUN chmod +x update_script.sh
-
 
 # Instala las dependencias
 RUN npm install 
