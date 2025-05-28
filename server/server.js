@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const { Client } = require('pg'); // Cliente de PostgreSQL
 const path = require('path');
 const { exec } = require('child_process');
+const fs = require('fs').promises; // Usamos la versión de promesas de fs
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
