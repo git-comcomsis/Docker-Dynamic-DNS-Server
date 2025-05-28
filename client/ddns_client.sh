@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Configuración del Cliente ---
-SERVER_URL="https://ddns.tu-dominio.com/api_update/nombre_de_esta_ubicacion" # ¡CAMBIA ESTO!
+SERVER_URL="https://ddns-mid.comsis.online/api_update/nombre_de_esta_ubicacion" # ¡CAMBIA ESTO!
 SECRET_KEY="your_super_secret_key" # ¡DEBE COINCIDIR CON LA DEL SERVIDOR (DDNS_SECRET_KEY)!
 
 # Archivo para guardar la IP previamente conocida
