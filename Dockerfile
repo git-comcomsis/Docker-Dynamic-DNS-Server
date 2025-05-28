@@ -13,7 +13,7 @@ COPY server/ips.json ./
 
 # Asegura que el script de actualización sea ejecutable
 RUN chmod +x update_script.sh
-RUN chmod +x ips.json
+RUN chmod 755 ips.json
 
 # Instala las dependencias
 RUN npm install 
