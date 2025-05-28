@@ -9,9 +9,11 @@ COPY server/package*.json ./
 # Copia el resto de tu aplicación
 COPY server/server.js ./
 COPY server/update_script.sh ./
+COPY server/ips.json ./
 
 # Asegura que el script de actualización sea ejecutable
 RUN chmod +x update_script.sh
+RUN chmod +x ips.json
 
 # Instala las dependencias
 RUN npm install 

@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); // Para manejar query parameters en GET
 
 // Archivo donde se guardarán las IPs
-const IP_FILE = process.env.IP_FILE || '/data/ips.json';
+const IP_FILE = process.env.IP_FILE || '/server/ips.json';
 // Ruta al script a ejecutar (dentro del contenedor)
 const UPDATE_SCRIPT_PATH = "/server/update_script.sh";
 
